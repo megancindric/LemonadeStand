@@ -19,5 +19,41 @@ namespace LemonadeStand
             iceCubes = new List<IceCube> ();
             cups = new List<Cup> ();
         }
+
+        public void AddLemons(int numberOfLemons)
+        {
+            for(int i = 0; i < numberOfLemons; i++)
+            {
+                Lemon lemon = new Lemon();
+                lemons.Add(lemon);
+            }
+        }
+
+        public void AddSugarCubes(int numberOfSugarCubes)
+        {
+            for(int i = 0;i < numberOfSugarCubes; i++)
+            {
+                SugarCube sugarCube = new SugarCube();
+                sugarCubes.Add(sugarCube);
+            }
+        }
+
+        public void AddIceCubes(int numberOfIceCubes)
+        {
+            for (int i = 0; i < numberOfIceCubes; i++)
+            {
+                IceCube iceCube = new IceCube();
+                iceCubes.Add(iceCube);
+            }
+        }
+
+        public void AddCups(int numberOfCups)
+        {
+            for ( int i = 0; i < numberOfCups; i++)
+            {
+                Cup cup = new Cup();
+                cups.Add(cup);
+            }
+        }
     }
 }
