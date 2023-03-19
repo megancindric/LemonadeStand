@@ -18,6 +18,10 @@ namespace LemonadeStand
             sugarCubes = new List<SugarCube> ();
             iceCubes = new List<IceCube> ();
             cups = new List<Cup> ();
+            AddLemons(20);
+            AddSugarCubes(20);
+            AddIceCubes(100);
+            AddCups(30);
         }
 
         public void AddLemons(int numberOfLemons)
