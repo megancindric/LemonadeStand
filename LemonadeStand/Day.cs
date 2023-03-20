@@ -77,7 +77,8 @@ namespace LemonadeStand
             // Confirm there is still cups available, then...
             // If they buy a cup, increment numberOfSales by 1
             // And increment dailySales by the price
-
+            Console.WriteLine("\n\n=============== DAY COMPLETE!! ===============\n\n");
+            Console.WriteLine($"SALES REPORT\nTotal Customers: {customers.Count}\nTotal Cups Sold: ${numberOfSales}\nDaily Sales: ${totalSales}");
             // Finally, print out information about the total number of customers, how many bought a cup, and overall total income
             return totalSales;
         }

@@ -23,7 +23,7 @@ namespace LemonadeStand
 
         public void DisplayRecipe()
         {
-            Console.WriteLine($"Your current recipe for lemonade is as follows:\n\n1 Pitcher Lemonade\n{numberOfLemons} lemons\n{numberOfSugarCubes} sugar cubes\n{numberOfIceCubes} ice cubes\n\n${price} per cup");
+            Console.WriteLine($"\t1 Pitcher of Lemonade:\n{numberOfLemons} lemons\n{numberOfSugarCubes} sugar cubes\n{numberOfIceCubes} ice cubes\n\n${price} per cup");
         }
     }
 }
