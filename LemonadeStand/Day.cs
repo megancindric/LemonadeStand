@@ -51,34 +51,36 @@ namespace LemonadeStand
             // Each customer will randomly choose to buy a cup
             foreach(Customer customer in customers)
             {
-                Console.WriteLine("A customer approaches!\n");
+                Console.WriteLine("A customer approaches!");
                 bool didBuyCup = customer.BuyLemonade(rand, weatherBoost);
                 if (didBuyCup)
                 {
-                    Console.WriteLine("They decided to buy a cup of lemonade!\n");
+                    Console.WriteLine("They decided to buy a cup of lemonade...");
                     if (cupsMade > 0)
                     {
                         numberOfSales++;
                         totalSales += cupPrice;
                         cupsMade--;
-                        Console.WriteLine("And they bought a refreshing cup of lemonade! :)");
+                        Console.WriteLine("And they bought a refreshing cup of lemonade! :)\n");
                     }
                     else
                     {
-                        Console.WriteLine("...but there was no lemonade left to buy :(");
+                        Console.WriteLine("...but there was no lemonade left to buy :(\n");
                     }
                     
                 }
                 else
                 {
-                    Console.WriteLine("And they decided not to buy any!");
+                    Console.WriteLine("And they decided not to buy any!\n");
                 }
             }
             // Confirm there is still cups available, then...
             // If they buy a cup, increment numberOfSales by 1
             // And increment dailySales by the price
             Console.WriteLine("\n\n=============== DAY COMPLETE!! ===============\n\n");
-            Console.WriteLine($"SALES REPORT\nTotal Customers: {customers.Count}\nTotal Cups Sold: ${numberOfSales}\nDaily Sales: ${totalSales}");
+            
+            Console.WriteLine($"SALES REPORT\nTotal Customers: {customers.Count}\nTotal Cups Sold: {numberOfSales}\nDaily Sales: ${totalSales}");
+            Console.ReadLine();
             // Finally, print out information about the total number of customers, how many bought a cup, and overall total income
             return totalSales;
         }

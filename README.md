@@ -11,3 +11,18 @@
 - Adjustable lemonade recipe, so users may adjust as they see fit
 - EOD sales report displaying profit or loss for each day, along with overall profit or loss for entire game
 - User input validation, so users cannot purchase beyond their cash amount, or make lemonade with insufficient ingredients
+
+
+
+
+### TODO's:
+
+- Implement menu interface for store
+- Implement menu to "start day", including the following options
+  - Adjust recipe
+  - Adjust price
+  - See current status
+  - See weather forecast
+  - Begin day
+- Add logic to allow price to affect chance of purchasing
+- Create "log" to check sales from previous days

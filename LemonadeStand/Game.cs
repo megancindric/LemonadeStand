@@ -31,8 +31,8 @@ namespace LemonadeStand
             {
                 // Run this loop 7 times (1 week)
                 // For each day:
-                // Create the day (days at current index) which will create weather for the day
-                days[currentDay] = new Day(rand);
+                // Create the day, which will create weather for the day, add to days list
+                days.Add(new Day(rand));
                 // Display the current day
                 Console.WriteLine($"\n\nWelcome to day {this.currentDay + 1}!\n\n");
                 // Display the current weather FORECAST
@@ -49,22 +49,50 @@ namespace LemonadeStand
                 // Make number of pitchers
                 // Number of pitchers * 8 will be total available cups
                 // If they are short on items, go to the store
-                bool madeLemonade = player.CanMakeLemonade(numberOfPitchers);
+
+                bool canMakeLemonade = player.CanMakeLemonade(numberOfPitchers);
+
+                while (!canMakeLemonade)
+                {
+                    GoToStore();
+                    canMakeLemonade = player.CanMakeLemonade(numberOfPitchers);
+                }
                 // Display the current ACTUAL WEATHER
                 days[currentDay].weather.DisplayActualWeather();
                 // Determine today's customers
                 // Determine total sales
+                days[currentDay].CalculateCustomers();
+                double totalSales = days[currentDay].CalculateSales((numberOfPitchers * 8), player.recipe.Price);
                 // Add sales to wallet
+                player.wallet.ReceiveMoney(totalSales);
                 // Increment day
                 currentDay++;
             }
-            
-        
+            DisplayFinalScore();
         }
+
 
         public void DisplayWelcome()
         {
             Console.WriteLine("Welcome to the lemonade stand!\nYou will have 7 days to try to make as much money as you can!\n\nGOOD LUCK!!");
+        }
+
+        public void GoToStore()
+        {
+            player.DisplayInventory();
+            player.DisplayMoney();
+            store.SellLemons(player);
+            store.SellSugarCubes(player);
+            store.SellIceCubes(player);
+            store.SellCups(player);
+
+        }
+
+        public void DisplayFinalScore()
+        {
+            Console.WriteLine("\n\n=============== WEEK COMPLETED!! ===============\n\n");
+            Console.WriteLine($"You ended the week with ${player.wallet.Money}!");
+            Console.ReadLine();
         }
     }
 }

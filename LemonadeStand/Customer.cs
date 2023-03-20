@@ -16,9 +16,9 @@ namespace LemonadeStand
         public bool BuyLemonade(Random rand, int weatherBonus)
         {
             // Randomly select a number
-            int roll = rand.Next(0, 5);
+            int roll = rand.Next(1, 5);
             roll += weatherBonus;
-            if (roll >5)
+            if (roll >=4)
             {
                 return true;
             }

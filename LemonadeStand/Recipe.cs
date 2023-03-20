@@ -8,22 +8,25 @@ namespace LemonadeStand
 {
     internal class Recipe
     {
-        private int numberOfLemons;
-        private int numberOfSugarCubes;
-        private int numberOfIceCubes;
-        private double price;
-
+        private int _numberOfLemons;
+        private int _numberOfSugarCubes;
+        private int _numberOfIceCubes;
+        private double _price;
+        public int NumberOfLemons { get { return _numberOfLemons; } set { _numberOfLemons = value; } }
+        public int NumberOfSugarCubes { get { return _numberOfSugarCubes; } set { _numberOfSugarCubes = value; } }
+        public int NumberOfIceCubes { get { return _numberOfIceCubes; } set { _numberOfIceCubes = value; } }
+        public double Price { get { return _price; } set { _price = value; } }
         public Recipe()
         {
-            numberOfLemons = 2;
-            numberOfSugarCubes = 4;
-            numberOfIceCubes = 10;
-            price = 1;
+            NumberOfLemons = 2;
+            NumberOfSugarCubes = 4;
+            NumberOfIceCubes = 10;
+            Price = 1;
         }
 
         public void DisplayRecipe()
         {
-            Console.WriteLine($"\t1 Pitcher of Lemonade:\n{numberOfLemons} lemons\n{numberOfSugarCubes} sugar cubes\n{numberOfIceCubes} ice cubes\n\n${price} per cup");
+            Console.WriteLine($"\t1 Pitcher of Lemonade:\n\t{NumberOfLemons} lemons\n\t{NumberOfSugarCubes} sugar cubes\n\t{NumberOfIceCubes} ice cubes\n\n\t${Price} per cup\n\n");
         }
     }
 }

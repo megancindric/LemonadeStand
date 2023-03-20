@@ -14,7 +14,7 @@ namespace LemonadeStand
             int quantityOfItem = -1;
             while(!userInputIsInt ||  quantityOfItem < 0) {
                 Console.WriteLine($"How many {itemName} would you like to purchase?");
-                Console.WriteLine("Please enter a positive number, or press 0 to cancel purchase");
+                Console.WriteLine("Please enter a positive number, or press 0 to cancel.");
                 userInputIsInt = Int32.TryParse(Console.ReadLine(), out quantityOfItem);
             }
             return quantityOfItem;

@@ -54,12 +54,12 @@ namespace LemonadeStand
 
         public void DisplayWeatherForecast()
         {
-            Console.WriteLine($"Today's weather forecast is: {predictedForecast}");
+            Console.WriteLine($"\nToday's weather forecast is: {predictedForecast}\n");
         }
 
         public void DisplayActualWeather()
         {
-            Console.WriteLine($"Today was {temperature} degrees F, and {condition}!");
+            Console.WriteLine($"\nToday was {temperature} degrees F, and {condition}!\n");
         }
 
     }

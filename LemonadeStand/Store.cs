@@ -20,6 +20,14 @@ namespace LemonadeStand
             iceCubePrice = 0.01;
             cupPrice = .25;
         }
+        public void ShowMenu()
+        {
+            // Show welcome message, show price of each item
+            Console.WriteLine();
+
+        }
+        
+        //TODO: Add success/thank you message after purchase, show item number and total cost
         public void SellLemons(Player player)
         {
             int lemonQuantity = UserInterface.GetNumberOfItems("lemons");

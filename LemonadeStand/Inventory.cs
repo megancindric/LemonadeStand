@@ -23,7 +23,6 @@ namespace LemonadeStand
             AddIceCubes(100);
             AddCups(30);
         }
-
         public void AddLemons(int numberOfLemons)
         {
             for(int i = 0; i < numberOfLemons; i++)
